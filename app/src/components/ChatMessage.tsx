@@ -22,7 +22,7 @@ export const ChatMessage = ({ message, isUser, timestamp }: ChatMessageProps) =>
         
         // 💡 A MÁGICA ACONTECE AQUI!
         // Força a cor do texto em negrito para branco no modo escuro.
-        "dark:prose-strong:text-white", 
+        "prose-strong:text-white", 
         
         isUser 
           ? "bg-chat-user text-white rounded-br-md" 
