@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Heart, Brain } from "lucide-react";
+import { MessageCircle, Heart, HandHelpingIcon } from "lucide-react";
 
 interface WelcomeScreenProps {
   onStartChat: () => void;
@@ -14,7 +14,7 @@ export const WelcomeScreen = ({ onStartChat }: WelcomeScreenProps) => {
         {/* Logo/Ícone simplificado */}
         <div className="mb-8">
           <div className="w-28 h-28 mx-auto bg-gradient-primary rounded-full flex items-center justify-center shadow-soft">
-            <Brain className="w-14 h-14 text-white" />
+            <HandHelpingIcon className="w-14 h-14 text-white" />
           </div>
         </div>
 
