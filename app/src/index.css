@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paleta de Cores "Sereno"
+  Light: "Azul Sereno"
+  Dark:  "Noite Serena"
+  Tons de azul calmos e dessaturados para uma sensação de tranquilidade,
+  confiança e profissionalismo.
+  Todas as cores DEVEM ser HSL.
+*/
+
+@layer base {
+  :root {
+    /* TEMA CLARO: "Azul Sereno" */
+    --background: 215 30% 98%; /* Quase branco, com um toque azulado muito subtil */
+    --foreground: 215 25% 25%; /* Cinza-azulado escuro para texto */
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 25%;
+
+    --primary: 215 90% 55%; /* Azul principal, vibrante mas não agressivo */
+    --primary-foreground: 0 0% 100%; /* Texto do botão branco puro */
+
+    --secondary: 215 40% 94%; /* Azul bem claro para fundos secundários */
+    --secondary-foreground: 215 25% 25%;
+
+    --muted: 215 30% 97%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 215 50% 90%; /* Azul mais claro para acentos subtis */
+    --accent-foreground: 215 25% 25%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 30% 90%;
+    --input: 215 40% 96%;
+    --ring: 215 90% 55%;
+
+    --radius: 1rem;
+
+    /* Cores específicas da aplicação */
+    --health-primary: 215 90% 55%;
+    --health-secondary: 190 60% 50%; /* Um azul-petróleo suave como cor de apoio */
+    --chat-user: 215 90% 55%; /* Balão do utilizador no azul principal */
+    --chat-ai: 215 40% 94%;   /* Balão da IA no azul bem claro */
+    --success: 165 60% 50%;
+    --warning: 45 90% 60%;
+    
+    /* Gradientes e sombras */
+    --gradient-primary: linear-gradient(135deg, hsl(215 90% 55%), hsl(190 60% 50%));
+    --gradient-background: linear-gradient(180deg, hsl(215 30% 98%), hsl(215 15% 95%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(215 15% 98%));
+    
+    --shadow-soft: 0 4px 12px -2px hsl(215 25% 25% / 0.08);
+    --shadow-chat: 0 2px 8px -1px hsl(215 25% 25% / 0.06);
+    --shadow-button: 0 4px 8px -2px hsl(215 90% 55% / 0.2);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Cores da Sidebar */
+    --sidebar-background: 215 30% 98%;
+    --sidebar-foreground: 215 25% 25%;
+    --sidebar-primary: 215 25% 20%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 40% 94%;
+    --sidebar-accent-foreground: 215 25% 25%;
+    --sidebar-border: 215 30% 90%;
+    --sidebar-ring: 215 90% 55%;
+  }
+
+  :root {
+    /* TEMA ESCURO: "Noite Serena" */
+    --background: 215 28% 12%; /* Azul noite, bem escuro e profundo */
+    --foreground: 215 20% 92%; /* Texto branco com um leve tom azulado */
+
+    --card: 215 25% 16%; /* Um pouco mais claro que o fundo para diferenciação */
+    --card-foreground: 215 20% 92%;
+
+    --popover: 215 28% 12%;
+    --popover-foreground: 215 20% 92%;
+
+    --primary: 215 85% 65%; /* Azul mais claro para ter bom contraste no escuro */
+    --primary-foreground: 215 25% 10%; /* Texto do botão bem escuro para contraste */
+
+    --secondary: 215 20% 22%; /* Cinza-azulado médio-escuro para fundos secundários */
+    --secondary-foreground: 215 20% 92%;
+
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 15% 60%; /* Texto secundário, mais acinzentado */
+
+    --accent: 215 20% 22%;
+    --accent-foreground: 215 20% 92%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 24%; /* Borda subtil, um pouco mais clara que os fundos */
+    --input: 215 20% 20%;
+    --ring: 215 85% 65%;
+
+    /* Cores específicas da aplicação para o tema escuro */
+    --health-primary: 215 85% 65%;
+    --health-secondary: 190 65% 60%; 
+    --chat-user: 215 85% 65%;
+    --chat-ai: 215 20% 22%;
+    --success: 165 65% 55%;
+    --warning: 45 90% 65%;
+
+    /* Gradientes e sombras para o tema escuro */
+    --gradient-primary: linear-gradient(135deg, hsl(215 85% 65%), hsl(190 65% 60%));
+    --gradient-background: linear-gradient(180deg, hsl(215 28% 12%), hsl(215 30% 10%));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 18%), hsl(215 25% 15%));
+
+    --shadow-soft: 0 4px 12px -2px hsl(215 30% 5% / 0.1);
+    --shadow-chat: 0 2px 8px -1px hsl(215 30% 5% / 0.08);
+    --shadow-button: 0 4px 14px -2px hsl(215 85% 65% / 0.2); /* Um brilho em vez de uma sombra */
+
+    /* Cores da Sidebar para o tema escuro */
+    --sidebar-background: 215 28% 12%;
+    --sidebar-foreground: 215 20% 92%;
+    --sidebar-primary: 215 85% 65%;
+    --sidebar-primary-foreground: 215 25% 10%;
+    --sidebar-accent: 215 20% 18%;
+    --sidebar-accent-foreground: 215 20% 92%;
+    --sidebar-border: 215 20% 24%;
+    --sidebar-ring: 215 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
