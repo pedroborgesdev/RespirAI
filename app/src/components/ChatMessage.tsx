@@ -17,8 +17,11 @@ export const ChatMessage = ({ message, isUser, timestamp }: ChatMessageProps) =>
       <div className={cn(
         "max-w-[80%] px-4 py-3 rounded-2xl shadow-chat",
         
+        // Aplica estilos base de tipografia e ajusta para o tema escuro
         "prose prose-sm dark:prose-invert",
         
+        // 💡 A MÁGICA ACONTECE AQUI!
+        // Força a cor do texto em negrito para branco no modo escuro.
         "dark:prose-strong:text-white", 
         
         isUser 
